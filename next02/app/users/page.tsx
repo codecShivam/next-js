@@ -1,16 +1,14 @@
 import type { Metadata } from 'next';
-import getAllUsers from '../lib/getAllUsers';
-import Link from 'next/link';
+import getAllUsers from '../lib/getAllUsers'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
     title: 'Users',
 }
 
 export default async function UsersPage() {
-    const usersData: Promise<User[]> = getAllUsers();
-
-    const users = await usersData;
-
+    const usersData: Promise<User[]> = getAllUsers()
+    const users = await usersData
     const content = (
         <section>
             <h2>
@@ -31,5 +29,5 @@ export default async function UsersPage() {
         </section>
     )
 
-    return content;
+    return content
 }

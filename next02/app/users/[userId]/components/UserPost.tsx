@@ -9,6 +9,7 @@ export default async function UserPost({ promise }: Props) {
             <article key={post.id}>
                 <h2>{post.title}</h2>
                 <p>{post.body}</p>
+                <br />
             </article>
         )
     }
